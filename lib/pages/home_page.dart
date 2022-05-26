@@ -2,9 +2,9 @@ import 'dart:js';
 
 import 'package:cozy_v2/models/city.dart';
 import 'package:cozy_v2/models/space.dart';
-import 'package:cozy_v2/models/theme.dart';
+import 'package:cozy_v2/theme.dart';
 import 'package:cozy_v2/models/tips.dart';
-import 'package:cozy_v2/provaider/space_provaider.dart';
+import 'package:cozy_v2/provider/space_provider.dart';
 import 'package:cozy_v2/widgets/bottom_navbar.dart';
 import 'package:cozy_v2/widgets/city_card.dart';
 import 'package:cozy_v2/widgets/space_card.dart';
