@@ -1,12 +1,16 @@
+import 'dart:js';
+
 import 'package:cozy_v2/models/city.dart';
 import 'package:cozy_v2/models/space.dart';
 import 'package:cozy_v2/models/theme.dart';
 import 'package:cozy_v2/models/tips.dart';
+import 'package:cozy_v2/provaider/space_provaider.dart';
 import 'package:cozy_v2/widgets/bottom_navbar.dart';
 import 'package:cozy_v2/widgets/city_card.dart';
 import 'package:cozy_v2/widgets/space_card.dart';
 import 'package:cozy_v2/widgets/tips_card.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -90,35 +94,58 @@ class HomePage extends StatelessWidget {
                 children: [
                   SpaceCard(
                     Space(
-                        id: 1,
-                        Country: 'Germany',
-                        city: 'Bandung',
-                        imageUrl: 'assets/images/city1.png',
-                        name: 'Kuretakeso Hott',
-                        price: 52,
-                        rating: 4),
+                      id: 1,
+                      country: 'Germany',
+                      city: 'Bandung',
+                      imageUrl: 'assets/images/city1.png',
+                      name: 'Kuretakeso Hott',
+                      price: 52,
+                      rating: 4,
+                      address: '',
+                      mapUrl: '',
+                      phone: '',
+                      photo: [],
+                      numberOfCupboards: 2,
+                      numberOfKitchen: 3,
+                      numberOfbedrom: 3,
+                    ),
                   ),
                   SizedBox(height: 30),
                   SpaceCard(
                     Space(
-                      Country: 'Bogor',
+                      country: 'Bogor',
                       city: 'Seattle',
                       id: 2,
                       imageUrl: 'assets/images/city2.png',
                       name: 'Roemah Nenek',
                       price: 11,
                       rating: 5,
+                      address: '',
+                      mapUrl: '',
+                      phone: '',
+                      photo: [],
+                      numberOfCupboards: 2,
+                      numberOfKitchen: 3,
+                      numberOfbedrom: 3,
                     ),
                   ),
                   SizedBox(height: 30),
                   SpaceCard(Space(
-                      Country: 'Indonesia',
-                      city: 'Jakarta',
-                      id: 3,
-                      imageUrl: 'assets/images/darling.png',
-                      name: 'Darrling How',
-                      price: 20,
-                      rating: 3)),
+                    country: 'Indonesia',
+                    city: 'Jakarta',
+                    id: 3,
+                    imageUrl: 'assets/images/darling.png',
+                    name: 'Darrling How',
+                    price: 20,
+                    rating: 3,
+                    address: '',
+                    mapUrl: '',
+                    phone: '',
+                    photo: [],
+                    numberOfCupboards: 2,
+                    numberOfKitchen: 3,
+                    numberOfbedrom: 3,
+                  )),
                   SizedBox(height: 30),
                 ],
               ),

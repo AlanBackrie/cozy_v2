@@ -82,7 +82,7 @@ class SpaceCard extends StatelessWidget {
               ),
               SizedBox(height: 16),
               Text(
-                "${space.city}, ${space.Country} ",
+                "${space.city}, ${space.country} ",
                 style: greyTextStyle,
               )
             ],
