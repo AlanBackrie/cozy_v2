@@ -6,46 +6,46 @@ class Space {
   String imageUrl;
   int price;
   String city;
-  String Country;
+  String country;
   int rating;
-  // String address;
-  // String phone;
-  // String mapUrl;
-  // List Photo;
-  // int numberOfKitchen;
-  // int numberOfbedrom;
-  // int numberOfCupboards;
+  String address;
+  String phone;
+  String mapUrl;
+  List photo;
+  int numberOfKitchen;
+  int numberOfbedrom;
+  int numberOfCupboards;
 
-  Space({
-    required this.Country,
-    required this.city,
-    required this.id,
-    required this.imageUrl,
-    required this.name,
-    required this.price,
-    required this.rating,
-    // required this.Photo,
-    // required this.address,
-    // required this.mapUrl,
-    // required this.numberOfKitchen,
-    // required this.numberOfbedrom,
-    // required this.numberOfCupboards,
-    // required this.phone
-  });
+  Space(
+      {required this.country,
+      required this.city,
+      required this.id,
+      required this.imageUrl,
+      required this.name,
+      required this.price,
+      required this.rating,
+      required this.photo,
+      required this.address,
+      required this.mapUrl,
+      required this.numberOfKitchen,
+      required this.numberOfbedrom,
+      required this.numberOfCupboards,
+      required this.phone});
 
-  // Space.fromJson(json) {
-  //   id = json['id'];
-  //   name = json['name'];
-  //   city = json['city'];
-  //   Country = json['country'];
-  //   imageUrl = json['imageUrl'];
-  //   price = json['price'];
-  //   rating = json['rating'];
-  //   address = json['address'];
-  //   phone = json['phone'];
-  //   mapUrl = json['mapUrl'];
-  //   numberOfKitchen = json['numberOfKitchen'];
-  //   numberOfbedrom = json['numberOfbedrom'];
-  //   numberOfCupboards = json['numberOfCupboards'];
-  // }
+  factory Space.fromJson(Map<String, dynamic> json) => Space(
+        country: json['country'],
+        city: json['city'],
+        id: json['id'],
+        imageUrl: json['imageUrl'],
+        name: json['name'],
+        price: json['price'],
+        rating: json['rating'],
+        photo: json['photo'],
+        address: json['address'],
+        mapUrl: json['mapUrl'],
+        numberOfKitchen: json['numberOfKitchen'],
+        numberOfbedrom: json['numberOfbedrom'],
+        numberOfCupboards: json['numberOfCupboards'],
+        phone: json['phone'],
+      );
 }
