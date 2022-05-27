@@ -1,5 +1,5 @@
 import 'package:cozy_v2/pages/splash.dart';
-import 'package:cozy_v2/provaider/space_provaider.dart';
+import 'package:cozy_v2/provider/space_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

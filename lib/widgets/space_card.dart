@@ -1,7 +1,7 @@
 import 'package:cozy_v2/models/space.dart';
 import 'package:cozy_v2/pages/detail_page.dart';
 import 'package:flutter/material.dart';
-import 'package:cozy_v2/models/theme.dart';
+import 'package:cozy_v2/theme.dart';
 
 class SpaceCard extends StatelessWidget {
   final Space space;

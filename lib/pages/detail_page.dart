@@ -1,4 +1,4 @@
-import 'package:cozy_v2/models/theme.dart';
+import 'package:cozy_v2/theme.dart';
 import 'package:cozy_v2/widgets/facility_item.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';

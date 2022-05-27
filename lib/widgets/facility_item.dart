@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../models/theme.dart';
+import '../theme.dart';
 
 class FacilityItems extends StatelessWidget {
   String imageUrl;
