@@ -4,18 +4,18 @@ import 'package:cozy_v2/widgets/space_card.dart';
 class Space {
   int id;
   String name;
-  String imageUrl;
-  int price;
   String city;
   String country;
+  int price;
+  String imageUrl;
   int rating;
   String address;
   String phone;
   String mapUrl;
-  List photo;
-  int numberOfKitchen;
-  int numberOfbedrom;
-  int numberOfCupboards;
+  List photos;
+  int number_of_kitchens;
+  int number_of_bedrooms;
+  int number_of_cupboards;
 
   Space(
       {required this.country,
@@ -25,28 +25,28 @@ class Space {
       required this.name,
       required this.price,
       required this.rating,
-      required this.photo,
+      required this.photos,
       required this.address,
       required this.mapUrl,
-      required this.numberOfKitchen,
-      required this.numberOfbedrom,
-      required this.numberOfCupboards,
+      required this.number_of_kitchens,
+      required this.number_of_bedrooms,
+      required this.number_of_cupboards,
       required this.phone});
 
   factory Space.fromJson(Map<String, dynamic> json) => Space(
         country: json['country'],
         city: json['city'],
         id: json['id'],
-        imageUrl: json['imageUrl'],
+        imageUrl: json['image_url'],
         name: json['name'],
         price: json['price'],
         rating: json['rating'],
-        photo: json['photo'],
+        photos: json['photos'],
         address: json['address'],
-        mapUrl: json['mapUrl'],
-        numberOfKitchen: json['numberOfKitchen'],
-        numberOfbedrom: json['numberOfbedrom'],
-        numberOfCupboards: json['numberOfCupboards'],
+        mapUrl: json['map_url'],
+        number_of_kitchens: json['number_of_kitchens'],
+        number_of_bedrooms: json['number_of_bedrooms'],
+        number_of_cupboards: json['number_of_cupboards'],
         phone: json['phone'],
       );
 }

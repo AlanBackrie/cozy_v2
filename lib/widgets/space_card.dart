@@ -6,7 +6,7 @@ import 'package:cozy_v2/theme.dart';
 class SpaceCard extends StatelessWidget {
   final Space space;
 
-  SpaceCard(this.space);
+  const SpaceCard(this.space, {Key? key}) : super(key: key);
 
   get purpleColor => null;
 
@@ -14,8 +14,8 @@ class SpaceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (content) => DetailPage()));
+        Navigator.push(context,
+            MaterialPageRoute(builder: (content) => DetailPage(space)));
       },
       child: Row(
         children: [
@@ -26,8 +26,11 @@ class SpaceCard extends StatelessWidget {
               width: 130,
               child: Stack(
                 children: [
-                  Image.asset(
+                  Image.network(
                     space.imageUrl,
+                    height: 110,
+                    width: 130,
+                    fit: BoxFit.cover,
                   ),
                   SizedBox(width: 16),
                   Align(
@@ -44,10 +47,11 @@ class SpaceCard extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Image.network(
-                              space.imageUrl,
+                            Image.asset(
+                              'assets/start.png',
                               height: 22,
                               width: 22,
+                              fit: BoxFit.cover,
                             ),
                             Text(
                               "${space.rating}/5",

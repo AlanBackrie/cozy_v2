@@ -92,20 +92,41 @@ class HomePage extends StatelessWidget {
               padding: EdgeInsets.symmetric(
                 horizontal: edge,
               ),
-              child: FutureBuilder(
-                  future: spaceProvider.getRecomendedSpace(),
-                  builder: ((context, snapshot) {
-                    if (snapshot.hasData) {
-                      List<Space> data = snapshot.data;
-
-                      return Column(
-                        children: data.map((item) => SpaceCard(item)).toList(),
-                      );
-                    }
-                    return Center(
+              child: FutureBuilder<List<Space>>(
+                future: spaceProvider.getRecomendedSpace(),
+                builder: ((context, snapshot) {
+                  // if (snapshot.hasData) {
+                  //   List<Space> data = snapshot.data!;
+                  //   return Column(
+                  //     children: data.map((item) => SpaceCard(item)).toList(),
+                  //   );
+                  // }
+                  // return Center(
+                  //   child: CircularProgressIndicator(),
+                  // );
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return const Center(
                       child: CircularProgressIndicator(),
                     );
-                  })),
+                  }
+                  if (snapshot.hasData) {
+                    List<Space> data = snapshot.data!;
+
+                    int index = 0;
+
+                    return Column(
+                      children: data.map((item) {
+                        index++;
+                        return Container(
+                          margin: EdgeInsets.only(top: index == 1 ? 0 : 30),
+                          child: SpaceCard(item),
+                        );
+                      }).toList(),
+                    );
+                  }
+                  return Text('tidak ada data');
+                }),
+              ),
             ),
             SizedBox(height: 30),
             // NOTE : Tips & Guidance
