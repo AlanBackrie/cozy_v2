@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:cozy_v2/widgets/space_card.dart';
 
 class Space {

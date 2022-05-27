@@ -44,8 +44,8 @@ class SpaceCard extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Image.asset(
-                              "assets/start.png",
+                            Image.network(
+                              space.imageUrl,
                               height: 22,
                               width: 22,
                             ),
